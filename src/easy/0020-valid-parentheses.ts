@@ -5,7 +5,7 @@ function isValid(s: string): boolean {
   const openers = ["(", "[", "{"]
   const closers = [")", "]", "}"]
 
-  const stack = []
+  const stack: string[] = []
 
   for (const char of s) {
     if (openers.includes(char)) {
