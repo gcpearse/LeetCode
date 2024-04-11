@@ -17,7 +17,7 @@ function isValid(s: string): boolean {
     }
   }
 
-  return stack.length < 2
+  return !stack.length
 }
 
 
