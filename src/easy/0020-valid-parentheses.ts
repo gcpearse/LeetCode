@@ -1,7 +1,5 @@
 function isValid(s: string): boolean {
 
-  if (s.length % 2) return false
-
   const openers = ["(", "[", "{"]
   const closers = [")", "]", "}"]
 
