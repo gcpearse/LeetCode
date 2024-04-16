@@ -1,6 +1,6 @@
 function searchInsert(nums: number[], target: number): number {
 
-  let res: number = 0
+  let res = 0
 
   if (nums.includes(target)) {
     res = nums.indexOf(target)
