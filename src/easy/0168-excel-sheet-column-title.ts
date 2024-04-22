@@ -5,18 +5,14 @@ function convertToTitle(columnNumber: number): string {
 
   while (current > 0) {
 
-    let remainder = current % 26
+    const remainder = current % 26
+    current -= remainder
 
     if (remainder) {
       result.unshift(String.fromCharCode(remainder + 64))
-    } else {
-      result.unshift("Z")
-    }
-
-    current -= remainder
-    if (remainder) {
       current = current / 26
     } else {
+      result.unshift("Z")
       current = current / 26 - 1
     }
   }
