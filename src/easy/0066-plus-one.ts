@@ -3,17 +3,25 @@ function plusOne(digits: number[]): number[] {
   const res: number[] = []
 
   if (digits[digits.length - 1] !== 9) {
+
     res.unshift(digits[digits.length - 1] + 1)
+
     for (let i = digits.length - 2; i >= 0; i--) {
       res.unshift(digits[i])
     }
+
   } else if (digits.every(digit => digit === 9)) {
+
     for (let i = 0; i < digits.length; i++) {
       res.unshift(0)
     }
+
     res.unshift(1)
+
   } else {
+
     let tally = 1
+
     for (let i = digits.length - 1; i >= 0; i--) {
       if (digits[i] === 9) {
         res.unshift(0)
@@ -24,6 +32,7 @@ function plusOne(digits: number[]): number[] {
         break
       }
     }
+
     for (let i = digits.length - tally; i >= 0; i--) {
       res.unshift(digits[i])
     }
