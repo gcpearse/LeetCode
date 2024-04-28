@@ -33,34 +33,3 @@ Input: ransomNote = "aa", magazine = "aab"
 Output: true
 
 */
-
-
-  // type Tally = {
-  //   [key: string]: number
-  // }
-
-  // const ransomNoteTally: Tally = {}
-  // const magazineTally: Tally = {}
-
-  // for (const char of ransomNote) {
-  //   if (!ransomNoteTally[char]) {
-  //     ransomNoteTally[char] = 1
-  //   } else {
-  //     ransomNoteTally[char]++
-  //   }
-  // }
-
-  // for (const char of magazine) {
-  //   if (!magazineTally[char]) {
-  //     magazineTally[char] = 1
-  //   } else {
-  //     magazineTally[char]++
-  //   }
-  // }
-
-  // for (const key in ransomNoteTally) {
-  //   if (!magazineTally[key]) return false
-  //   if (ransomNoteTally[key] > magazineTally[key]) return false
-  // }
-
-  // return true
