@@ -1,73 +1,26 @@
 function romanToInt(s: string): number {
 
+  type Map = {
+    [key: string]: number
+  }
+
+  const values: Map = {
+    M: 1000,
+    D: 500,
+    C: 100,
+    L: 50,
+    X: 10,
+    V: 5,
+    I: 1
+  }
+
   let int = 0
 
   for (let i = 0; i < s.length; i++) {
-
-    if (s[i] === "I") {
-      if (s[i + 1] === "V") {
-        int += 4
-      } else if (s[i + 1] === "X") {
-        int += 9
-      } else {
-        int++
-      }
-    }
-
-    if (s[i] === "V") {
-      if (s[i - 1] === "I") {
-        continue
-      } else {
-        int += 5
-      }
-    }
-
-    if (s[i] === "X") {
-      if (s[i - 1] === "I") {
-        continue
-      } else if (s[i + 1] === "L") {
-        int += 40
-      } else if (s[i + 1] === "C") {
-        int += 90
-      } else {
-        int += 10
-      }
-    }
-
-    if (s[i] === "L") {
-      if (s[i - 1] === "X") {
-        continue
-      } else {
-        int += 50
-      }
-    }
-
-    if (s[i] === "C") {
-      if (s[i - 1] === "X") {
-        continue
-      } else if (s[i + 1] === "D") {
-        int += 400
-      } else if (s[i + 1] === "M") {
-        int += 900
-      } else {
-        int += 100
-      }
-    }
-
-    if (s[i] === "D") {
-      if (s[i - 1] === "C") {
-        continue
-      } else {
-        int += 500
-      }
-    }
-
-    if (s[i] === "M") {
-      if (s[i - 1] === "C") {
-        continue
-      } else {
-        int += 1000
-      }
+    if (values[s[i]] < values[s[i + 1]]) {
+      int -= values[s[i]]
+    } else {
+      int += values[s[i]]
     }
   }
 
