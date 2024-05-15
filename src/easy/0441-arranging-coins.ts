@@ -10,10 +10,6 @@ function arrangeCoins(n: number): number {
   return row - 1
 }
 
-console.log(arrangeCoins(5))
-// 2
-console.log(arrangeCoins(8))
-// 3
 
 /*
 
