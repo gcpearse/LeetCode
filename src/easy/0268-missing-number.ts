@@ -1,4 +1,4 @@
-function missingNumber(nums: number[]): number {
+export function missingNumber(nums: number[]): number {
 
   const numsCopy = [...nums, 0]
 
