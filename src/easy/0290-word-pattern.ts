@@ -1,4 +1,4 @@
-function wordPattern(pattern: string, s: string): boolean {
+export function wordPattern(pattern: string, s: string): boolean {
 
   type Tally = {
     [key: string]: string
