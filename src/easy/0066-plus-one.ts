@@ -1,4 +1,4 @@
-function plusOne(digits: number[]): number[] {
+export function plusOne(digits: number[]): number[] {
 
   const res: number[] = []
 
