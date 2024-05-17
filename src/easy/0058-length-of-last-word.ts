@@ -1,4 +1,4 @@
-function lengthOfLastWord(s: string): number {
+export function lengthOfLastWord(s: string): number {
 
   const cleanStr = s.trim().replace(/\s+/g, " ")
 
