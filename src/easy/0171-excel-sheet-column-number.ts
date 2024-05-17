@@ -1,4 +1,4 @@
-function titleToNumber(columnTitle: string): number {
+export function titleToNumber(columnTitle: string): number {
 
   let multiplier = 1
   let result = 0
