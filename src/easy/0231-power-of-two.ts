@@ -1,4 +1,4 @@
-function isPowerOfTwo(n: number): boolean {
+export function isPowerOfTwo(n: number): boolean {
 
   let index = 0
 
