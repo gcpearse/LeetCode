@@ -1,4 +1,4 @@
-function convertToTitle(columnNumber: number): string {
+export function convertToTitle(columnNumber: number): string {
 
   let current = columnNumber
   const result: string[] = []
