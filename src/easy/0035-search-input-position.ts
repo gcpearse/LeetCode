@@ -1,4 +1,4 @@
-function searchInsert(nums: number[], target: number): number {
+export function searchInsert(nums: number[], target: number): number {
 
   let res = 0
 
