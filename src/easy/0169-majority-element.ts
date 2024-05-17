@@ -1,4 +1,4 @@
-function majorityElement(nums: number[]): number {
+export function majorityElement(nums: number[]): number {
 
   type Tally = {
     [key: string]: number
