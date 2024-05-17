@@ -1,4 +1,4 @@
-function containsDuplicate(nums: number[]): boolean {
+export function containsDuplicate(nums: number[]): boolean {
 
   return nums.length !== new Set<number>(nums).size
 }
