@@ -1,4 +1,4 @@
-function isValidPalindrome(s: string): boolean {
+export function isValidPalindrome(s: string): boolean {
 
   const convertedStr = s.toLowerCase().replace(/[^a-z0-9]/gi, "")
 
