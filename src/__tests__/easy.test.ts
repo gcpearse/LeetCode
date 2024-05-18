@@ -25,6 +25,7 @@ import { reverseVowels } from "../easy/0345-reverse-vowels-of-a-string"
 import { intersection } from "../easy/0349-intersection-of-two-arrays"
 import { isPerfectSquare } from "../easy/0367-valid-perfect-square"
 import { canConstruct } from "../easy/0383-ransom-note"
+import { firstUniqueChar } from "../easy/0387-first-unique-character-in-a-string"
 
 
 describe("twoSum", () => {
@@ -305,5 +306,17 @@ describe("canConstruct", () => {
   test("Returns false if ransomNote cannot be constructed using the letters from magazine", () => {
     expect(canConstruct("a", "b")).toBe(false)
     expect(canConstruct("aa", "ab")).toBe(false)
+  })
+})
+
+
+describe("firstUniqueChar", () => {
+  test("Returns the index of the first non-repeating character in the input string", () => {
+    expect(firstUniqueChar("leetcode")).toBe(0)
+    expect(firstUniqueChar("loveleetcode")).toBe(2)
+  })
+
+  test("Returns -1 if there is no non-repeating character in the input string", () => {
+    expect(firstUniqueChar("aabb")).toBe(-1)
   })
 })
