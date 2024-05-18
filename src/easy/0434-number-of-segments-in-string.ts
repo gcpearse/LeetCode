@@ -1,4 +1,4 @@
-function countSegments(s: string): number {
+export function countSegments(s: string): number {
 
   const cleanStr = s.trim().replace(/\s+/g, " ")
 
