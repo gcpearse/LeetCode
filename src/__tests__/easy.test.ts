@@ -21,6 +21,7 @@ import { missingNumber } from "../easy/0268-missing-number"
 import { wordPattern } from "../easy/0290-word-pattern"
 import { isPowerOfThree } from "../easy/0326-power-of-three"
 import { isPowerOfFour } from "../easy/0342-power-of-four"
+import { reverseVowels } from "../easy/0345-reverse-vowels-of-a-string"
 
 
 describe("twoSum", () => {
@@ -262,5 +263,13 @@ describe("isPowerOfFour", () => {
 
   test("Returns false when passed an integer that is not a power of four", () => {
     expect(isPowerOfFour(5)).toBe(false)
+  })
+})
+
+
+describe("reverseVowels", () => {
+  test("Returns a string in which only the vowels from the input string have been reversed", () => {
+    expect(reverseVowels("hello")).toBe("holle")
+    expect(reverseVowels("leetcode")).toBe("leotcede")
   })
 })
