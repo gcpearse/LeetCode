@@ -32,6 +32,7 @@ import { longestPalindrome } from "../easy/0409-longest-palindrome"
 import { fizzBuzz } from "../easy/0412-fizz-buzz"
 import { thirdMax } from "../easy/0414-third-maximum-number"
 import { countSegments } from "../easy/0434-number-of-segments-in-string"
+import { arrangeCoins } from "../easy/0441-arranging-coins"
 
 
 describe("twoSum", () => {
@@ -380,5 +381,13 @@ describe("countSegments", () => {
   test("Returns the number of segments in the input string", () => {
     expect(countSegments("Hello, my name is John")).toBe(5)
     expect(countSegments("Hello")).toBe(1)
+  })
+})
+
+
+describe("arrangeCoins", () => {
+  test("Returns the number of complete rows that can be built with n coins", () => {
+    expect(arrangeCoins(5)).toBe(2)
+    expect(arrangeCoins(8)).toBe(3)
   })
 })
