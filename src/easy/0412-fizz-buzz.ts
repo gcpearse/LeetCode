@@ -1,4 +1,4 @@
-function fizzBuzz(n: number): string[] {
+export function fizzBuzz(n: number): string[] {
 
   const result: string[] = []
 
