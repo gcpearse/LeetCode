@@ -1,4 +1,4 @@
-function isPerfectSquare(num: number): boolean {
+export function isPerfectSquare(num: number): boolean {
 
   if (num < 1) return false
 
