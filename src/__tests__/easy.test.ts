@@ -19,6 +19,7 @@ import { isAnagram } from "../easy/0242-valid-anagram"
 import { addDigits } from "../easy/0258-add-digits"
 import { missingNumber } from "../easy/0268-missing-number"
 import { wordPattern } from "../easy/0290-word-pattern"
+import { isPowerOfThree } from "../easy/0326-power-of-three"
 
 
 describe("twoSum", () => {
@@ -236,5 +237,17 @@ describe("wordPattern", () => {
   test("Returns false if the pattern does not match s", () => {
     expect(wordPattern("abba", "dog cat cat fish")).toBe(false)
     expect(wordPattern("aaaa", "dog cat cat fish")).toBe(false)
+  })
+})
+
+
+describe("isPowerOfThree", () => {
+  test("Returns true when passed an integer that is a power of three", () => {
+    expect(isPowerOfThree(27)).toBe(true)
+  })
+
+  test("Returns false when passed an integer that is not a power of three", () => {
+    expect(isPowerOfThree(0)).toBe(false)
+    expect(isPowerOfThree(-1)).toBe(false)
   })
 })
