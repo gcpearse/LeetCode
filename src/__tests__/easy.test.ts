@@ -29,6 +29,7 @@ import { firstUniqueChar } from "../easy/0387-first-unique-character-in-a-string
 import { findTheDifference } from "../easy/0389-find-the-difference"
 import { isSubsequence } from "../easy/0392-is-subsequence"
 import { longestPalindrome } from "../easy/0409-longest-palindrome"
+import { fizzBuzz } from "../easy/0412-fizz-buzz"
 
 
 describe("twoSum", () => {
@@ -348,5 +349,14 @@ describe("longestPalindrome", () => {
   test("Returns the length of the longest palindrome that can be built from the letters in the input string", () => {
     expect(longestPalindrome("abccccdd")).toBe(7)
     expect(longestPalindrome("a")).toBe(1)
+  })
+})
+
+
+describe("fizzBuzz", () => {
+  test("Returns an accurate FizzBuzz string array response", () => {
+    expect(fizzBuzz(3)).toEqual(["1", "2", "Fizz"])
+    expect(fizzBuzz(5)).toEqual(["1", "2", "Fizz", "4", "Buzz"])
+    expect(fizzBuzz(15)).toEqual(["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz"])
   })
 })
