@@ -1,4 +1,4 @@
-function isPowerOfThree(n: number): boolean {
+export function isPowerOfThree(n: number): boolean {
 
   if (n < 0) return false
 
