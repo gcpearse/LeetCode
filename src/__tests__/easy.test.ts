@@ -33,6 +33,7 @@ import { fizzBuzz } from "../easy/0412-fizz-buzz"
 import { thirdMax } from "../easy/0414-third-maximum-number"
 import { countSegments } from "../easy/0434-number-of-segments-in-string"
 import { arrangeCoins } from "../easy/0441-arranging-coins"
+import { findDisappearedNumbers } from "../easy/0448-find-all-numbers-disappeared-in-an-array"
 
 
 describe("twoSum", () => {
@@ -389,5 +390,13 @@ describe("arrangeCoins", () => {
   test("Returns the number of complete rows that can be built with n coins", () => {
     expect(arrangeCoins(5)).toBe(2)
     expect(arrangeCoins(8)).toBe(3)
+  })
+})
+
+
+describe("findDisappearedNumbers", () => {
+  test("Returns an array of the missing integers from the input array", () => {
+    expect(findDisappearedNumbers([4, 3, 2, 7, 8, 2, 3, 1])).toEqual([5, 6])
+    expect(findDisappearedNumbers([1, 1])).toEqual([2])
   })
 })
