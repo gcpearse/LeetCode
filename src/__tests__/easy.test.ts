@@ -26,6 +26,7 @@ import { intersection } from "../easy/0349-intersection-of-two-arrays"
 import { isPerfectSquare } from "../easy/0367-valid-perfect-square"
 import { canConstruct } from "../easy/0383-ransom-note"
 import { firstUniqueChar } from "../easy/0387-first-unique-character-in-a-string"
+import { findTheDifference } from "../easy/0389-find-the-difference"
 
 
 describe("twoSum", () => {
@@ -318,5 +319,13 @@ describe("firstUniqueChar", () => {
 
   test("Returns -1 if there is no non-repeating character in the input string", () => {
     expect(firstUniqueChar("aabb")).toBe(-1)
+  })
+})
+
+
+describe("findTheDifference", () => {
+  test("Returns the letter added to t", () => {
+    expect(findTheDifference("abcd", "abcde")).toBe("e")
+    expect(findTheDifference("", "y")).toBe("y")
   })
 })
