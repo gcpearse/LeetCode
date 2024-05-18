@@ -1,4 +1,4 @@
-function canConstruct(ransomNote: string, magazine: string): boolean {
+export function canConstruct(ransomNote: string, magazine: string): boolean {
 
   const magazineArray = magazine.split("")
 
