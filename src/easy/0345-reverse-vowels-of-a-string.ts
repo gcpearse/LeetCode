@@ -1,4 +1,4 @@
-function reverseVowels(s: string): string {
+export function reverseVowels(s: string): string {
 
   const reversedVowels = s.split("").filter(char => {
     return char.match(/[aeiou]/i)
