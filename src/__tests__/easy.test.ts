@@ -28,6 +28,7 @@ import { canConstruct } from "../easy/0383-ransom-note"
 import { firstUniqueChar } from "../easy/0387-first-unique-character-in-a-string"
 import { findTheDifference } from "../easy/0389-find-the-difference"
 import { isSubsequence } from "../easy/0392-is-subsequence"
+import { longestPalindrome } from "../easy/0409-longest-palindrome"
 
 
 describe("twoSum", () => {
@@ -339,5 +340,13 @@ describe("isSubsequence", () => {
 
   test("Returns false is s is not a subsequence of t", () => {
     expect(isSubsequence("axc", "ahbgdc")).toBe(false)
+  })
+})
+
+
+describe("longestPalindrome", () => {
+  test("Returns the length of the longest palindrome that can be built from the letters in the input string", () => {
+    expect(longestPalindrome("abccccdd")).toBe(7)
+    expect(longestPalindrome("a")).toBe(1)
   })
 })
