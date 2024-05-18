@@ -27,6 +27,7 @@ import { isPerfectSquare } from "../easy/0367-valid-perfect-square"
 import { canConstruct } from "../easy/0383-ransom-note"
 import { firstUniqueChar } from "../easy/0387-first-unique-character-in-a-string"
 import { findTheDifference } from "../easy/0389-find-the-difference"
+import { isSubsequence } from "../easy/0392-is-subsequence"
 
 
 describe("twoSum", () => {
@@ -327,5 +328,16 @@ describe("findTheDifference", () => {
   test("Returns the letter added to t", () => {
     expect(findTheDifference("abcd", "abcde")).toBe("e")
     expect(findTheDifference("", "y")).toBe("y")
+  })
+})
+
+
+describe("isSubsequence", () => {
+  test("Returns true is s is a subsequence of t", () => {
+    expect(isSubsequence("abc", "ahbgdc")).toBe(true)
+  })
+
+  test("Returns false is s is not a subsequence of t", () => {
+    expect(isSubsequence("axc", "ahbgdc")).toBe(false)
   })
 })
