@@ -1,4 +1,4 @@
-function isSubsequence(s: string, t: string): boolean {
+export function isSubsequence(s: string, t: string): boolean {
 
   let index = 0
   let count = s.length
