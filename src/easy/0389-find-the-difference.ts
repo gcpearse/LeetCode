@@ -1,4 +1,4 @@
-function findTheDifference(s: string, t: string): string {
+export function findTheDifference(s: string, t: string): string {
 
   let count = 0
 
