@@ -1,4 +1,4 @@
-function findContentChildren(g: number[], s: number[]): number {
+export function findContentChildren(g: number[], s: number[]): number {
 
   const sortedG = g.sort((a, b) => a - b)
   const sortedS = s.sort((a, b) => a - b)
