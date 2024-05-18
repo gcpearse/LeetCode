@@ -24,6 +24,7 @@ import { isPowerOfFour } from "../easy/0342-power-of-four"
 import { reverseVowels } from "../easy/0345-reverse-vowels-of-a-string"
 import { intersection } from "../easy/0349-intersection-of-two-arrays"
 import { isPerfectSquare } from "../easy/0367-valid-perfect-square"
+import { canConstruct } from "../easy/0383-ransom-note"
 
 
 describe("twoSum", () => {
@@ -292,5 +293,17 @@ describe("isPerfectSquare", () => {
 
   test("Returns false if the input integer is not a perfect square", () => {
     expect(isPerfectSquare(14)).toBe(false)
+  })
+})
+
+
+describe("canConstruct", () => {
+  test("Returns true if ransomNote can be constructed using the letters from magazine", () => {
+    expect(canConstruct("aa", "aab")).toBe(true)
+  })
+
+  test("Returns false if ransomNote cannot be constructed using the letters from magazine", () => {
+    expect(canConstruct("a", "b")).toBe(false)
+    expect(canConstruct("aa", "ab")).toBe(false)
   })
 })
