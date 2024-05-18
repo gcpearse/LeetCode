@@ -1,4 +1,4 @@
-function isPowerOfFour(n: number): boolean {
+export function isPowerOfFour(n: number): boolean {
 
   if (n < 0) return false
 
