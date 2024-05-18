@@ -22,6 +22,7 @@ import { wordPattern } from "../easy/0290-word-pattern"
 import { isPowerOfThree } from "../easy/0326-power-of-three"
 import { isPowerOfFour } from "../easy/0342-power-of-four"
 import { reverseVowels } from "../easy/0345-reverse-vowels-of-a-string"
+import { intersection } from "../easy/0349-intersection-of-two-arrays"
 
 
 describe("twoSum", () => {
@@ -271,5 +272,13 @@ describe("reverseVowels", () => {
   test("Returns a string in which only the vowels from the input string have been reversed", () => {
     expect(reverseVowels("hello")).toBe("holle")
     expect(reverseVowels("leetcode")).toBe("leotcede")
+  })
+})
+
+
+describe("intersection", () => {
+  test("Returns the intersection of the two input arrays", () => {
+    expect(intersection([1, 2, 2, 1], [2, 2])).toEqual([2])
+    expect(intersection([4, 9, 5], [9, 4, 9, 8, 4])).toEqual([4, 9])
   })
 })
