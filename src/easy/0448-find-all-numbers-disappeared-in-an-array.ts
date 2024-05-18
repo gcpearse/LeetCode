@@ -1,4 +1,4 @@
-function findDisappearedNumbers(nums: number[]): number[] {
+export function findDisappearedNumbers(nums: number[]): number[] {
 
   const set = new Set<number>(nums)
   const result: number[] = []
