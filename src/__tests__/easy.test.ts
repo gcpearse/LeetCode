@@ -23,6 +23,7 @@ import { isPowerOfThree } from "../easy/0326-power-of-three"
 import { isPowerOfFour } from "../easy/0342-power-of-four"
 import { reverseVowels } from "../easy/0345-reverse-vowels-of-a-string"
 import { intersection } from "../easy/0349-intersection-of-two-arrays"
+import { isPerfectSquare } from "../easy/0367-valid-perfect-square"
 
 
 describe("twoSum", () => {
@@ -280,5 +281,16 @@ describe("intersection", () => {
   test("Returns the intersection of the two input arrays", () => {
     expect(intersection([1, 2, 2, 1], [2, 2])).toEqual([2])
     expect(intersection([4, 9, 5], [9, 4, 9, 8, 4])).toEqual([4, 9])
+  })
+})
+
+
+describe("isPerfectSquare", () => {
+  test("Returns true if the input integer is a perfect square", () => {
+    expect(isPerfectSquare(16)).toBe(true)
+  })
+
+  test("Returns false if the input integer is not a perfect square", () => {
+    expect(isPerfectSquare(14)).toBe(false)
   })
 })
