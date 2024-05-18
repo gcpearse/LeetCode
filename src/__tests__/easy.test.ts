@@ -20,6 +20,7 @@ import { addDigits } from "../easy/0258-add-digits"
 import { missingNumber } from "../easy/0268-missing-number"
 import { wordPattern } from "../easy/0290-word-pattern"
 import { isPowerOfThree } from "../easy/0326-power-of-three"
+import { isPowerOfFour } from "../easy/0342-power-of-four"
 
 
 describe("twoSum", () => {
@@ -249,5 +250,17 @@ describe("isPowerOfThree", () => {
   test("Returns false when passed an integer that is not a power of three", () => {
     expect(isPowerOfThree(0)).toBe(false)
     expect(isPowerOfThree(-1)).toBe(false)
+  })
+})
+
+
+describe("isPowerOfFour", () => {
+  test("Returns true when passed an integer that is a power of four", () => {
+    expect(isPowerOfFour(16)).toBe(true)
+    expect(isPowerOfFour(1)).toBe(true)
+  })
+
+  test("Returns false when passed an integer that is not a power of four", () => {
+    expect(isPowerOfFour(5)).toBe(false)
   })
 })
