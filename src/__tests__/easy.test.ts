@@ -30,6 +30,7 @@ import { findTheDifference } from "../easy/0389-find-the-difference"
 import { isSubsequence } from "../easy/0392-is-subsequence"
 import { longestPalindrome } from "../easy/0409-longest-palindrome"
 import { fizzBuzz } from "../easy/0412-fizz-buzz"
+import { thirdMax } from "../easy/0414-third-maximum-number"
 
 
 describe("twoSum", () => {
@@ -358,5 +359,17 @@ describe("fizzBuzz", () => {
     expect(fizzBuzz(3)).toEqual(["1", "2", "Fizz"])
     expect(fizzBuzz(5)).toEqual(["1", "2", "Fizz", "4", "Buzz"])
     expect(fizzBuzz(15)).toEqual(["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz"])
+  })
+})
+
+
+describe("thirdMax", () => {
+  test("Returns the third distinct maximum number in the input array", () => {
+    expect(thirdMax([3, 2, 1])).toBe(1)
+    expect(thirdMax([2, 2, 3, 1])).toBe(1)
+  })
+
+  test("If the third maximum number does not exist, returns the maximum number", () => {
+    expect(thirdMax([1, 2])).toBe(2)
   })
 })
