@@ -1,4 +1,4 @@
-function longestPalindrome(s: string): number {
+export function longestPalindrome(s: string): number {
 
   type Tally = {
     [key: string]: number
