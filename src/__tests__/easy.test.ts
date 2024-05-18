@@ -31,6 +31,7 @@ import { isSubsequence } from "../easy/0392-is-subsequence"
 import { longestPalindrome } from "../easy/0409-longest-palindrome"
 import { fizzBuzz } from "../easy/0412-fizz-buzz"
 import { thirdMax } from "../easy/0414-third-maximum-number"
+import { countSegments } from "../easy/0434-number-of-segments-in-string"
 
 
 describe("twoSum", () => {
@@ -371,5 +372,13 @@ describe("thirdMax", () => {
 
   test("If the third maximum number does not exist, returns the maximum number", () => {
     expect(thirdMax([1, 2])).toBe(2)
+  })
+})
+
+
+describe("countSegments", () => {
+  test("Returns the number of segments in the input string", () => {
+    expect(countSegments("Hello, my name is John")).toBe(5)
+    expect(countSegments("Hello")).toBe(1)
   })
 })
