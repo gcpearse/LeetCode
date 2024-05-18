@@ -1,4 +1,4 @@
-function arrangeCoins(n: number): number {
+export function arrangeCoins(n: number): number {
 
   let row = 0
 
