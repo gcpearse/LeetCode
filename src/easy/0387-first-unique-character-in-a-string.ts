@@ -1,4 +1,4 @@
-function firstUniqueChar(s: string): number {
+export function firstUniqueChar(s: string): number {
 
   let index = -1
 
