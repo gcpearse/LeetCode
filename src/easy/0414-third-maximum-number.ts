@@ -1,4 +1,4 @@
-function thirdMax(nums: number[]): number {
+export function thirdMax(nums: number[]): number {
 
   const set = new Set<number>(nums)
   const sorted = [...set].sort((a, b) => b - a)
