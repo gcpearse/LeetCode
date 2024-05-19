@@ -35,6 +35,7 @@ import { countSegments } from "../easy/0434-number-of-segments-in-string"
 import { arrangeCoins } from "../easy/0441-arranging-coins"
 import { findDisappearedNumbers } from "../easy/0448-find-all-numbers-disappeared-in-an-array"
 import { findContentChildren } from "../easy/0455-assign-cookies"
+import { licenseKeyFormatting } from "../easy/0482-license-key-formatting"
 
 
 describe("twoSum", () => {
@@ -407,5 +408,14 @@ describe("findContentChildren", () => {
   test("Returns the expected number of content children", () => {
     expect(findContentChildren([1, 2, 3], [1, 1])).toBe(1)
     expect(findContentChildren([1, 2], [1, 2, 3])).toBe(2)
+  })
+})
+
+
+describe("licenseKeyFormatting", () => {
+  test("Returns the correctly formatted license key", () => {
+    expect(licenseKeyFormatting("5F3Z-2e-9-w", 4)).toBe("5F3Z-2E9W")
+    expect(licenseKeyFormatting("2-5g-3-J", 2)).toBe("2-5G-3J")
+    expect(licenseKeyFormatting("--a-a-a-a--", 2)).toBe("AA-AA")
   })
 })
