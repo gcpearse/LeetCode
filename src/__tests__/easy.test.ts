@@ -36,6 +36,7 @@ import { arrangeCoins } from "../easy/0441-arranging-coins"
 import { findDisappearedNumbers } from "../easy/0448-find-all-numbers-disappeared-in-an-array"
 import { findContentChildren } from "../easy/0455-assign-cookies"
 import { licenseKeyFormatting } from "../easy/0482-license-key-formatting"
+import { findMaxConsecutiveOnes } from "../easy/0485-max-consecutive-ones"
 
 
 describe("twoSum", () => {
@@ -417,5 +418,13 @@ describe("licenseKeyFormatting", () => {
     expect(licenseKeyFormatting("5F3Z-2e-9-w", 4)).toBe("5F3Z-2E9W")
     expect(licenseKeyFormatting("2-5g-3-J", 2)).toBe("2-5G-3J")
     expect(licenseKeyFormatting("--a-a-a-a--", 2)).toBe("AA-AA")
+  })
+})
+
+
+describe("findMaxConsecutiveOnes", () => {
+  test("Returns the maximum number of consecutive 1s in the input array", () => {
+    expect(findMaxConsecutiveOnes([1, 1, 0, 1, 1, 1])).toBe(3)
+    expect(findMaxConsecutiveOnes([1, 0, 1, 1, 0, 1])).toBe(2)
   })
 })
