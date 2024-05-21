@@ -38,6 +38,7 @@ import { findContentChildren } from "../easy/0455-assign-cookies"
 import { licenseKeyFormatting } from "../easy/0482-license-key-formatting"
 import { findMaxConsecutiveOnes } from "../easy/0485-max-consecutive-ones"
 import { findPoisonedDuration } from "../easy/0495-teemo-attacking"
+import { nextGreaterElement } from "../easy/0496-next-greater-element-i"
 
 
 describe("twoSum", () => {
@@ -435,5 +436,14 @@ describe("findPoisonedDuration", () => {
   test("Returns the correct total duration of the poison effect", () => {
     expect(findPoisonedDuration([1, 4], 2)).toBe(4)
     expect(findPoisonedDuration([1, 2], 2)).toBe(3)
+  })
+})
+
+
+describe("nextGreaterElement", () => {
+  test("Returns an array of the next greatest elements", () => {
+    expect(nextGreaterElement([4, 1, 2], [1, 3, 4, 2])).toEqual([-1, 3, -1])
+    expect(nextGreaterElement([2, 4], [1, 2, 3, 4])).toEqual([3, -1])
+    expect(nextGreaterElement([2, 1, 3], [2, 3, 1])).toEqual([3, -1, -1])
   })
 })
