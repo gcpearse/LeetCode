@@ -37,6 +37,7 @@ import { findDisappearedNumbers } from "../easy/0448-find-all-numbers-disappeare
 import { findContentChildren } from "../easy/0455-assign-cookies"
 import { licenseKeyFormatting } from "../easy/0482-license-key-formatting"
 import { findMaxConsecutiveOnes } from "../easy/0485-max-consecutive-ones"
+import { findPoisonedDuration } from "../easy/0495-teemo-attacking"
 
 
 describe("twoSum", () => {
@@ -426,5 +427,13 @@ describe("findMaxConsecutiveOnes", () => {
   test("Returns the maximum number of consecutive 1s in the input array", () => {
     expect(findMaxConsecutiveOnes([1, 1, 0, 1, 1, 1])).toBe(3)
     expect(findMaxConsecutiveOnes([1, 0, 1, 1, 0, 1])).toBe(2)
+  })
+})
+
+
+describe("findPoisonedDuration", () => {
+  test("Returns the correct total duration of the poison effect", () => {
+    expect(findPoisonedDuration([1, 4], 2)).toBe(4)
+    expect(findPoisonedDuration([1, 2], 2)).toBe(3)
   })
 })
