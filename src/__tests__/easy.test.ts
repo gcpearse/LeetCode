@@ -39,6 +39,7 @@ import { licenseKeyFormatting } from "../easy/0482-license-key-formatting"
 import { findMaxConsecutiveOnes } from "../easy/0485-max-consecutive-ones"
 import { findPoisonedDuration } from "../easy/0495-teemo-attacking"
 import { nextGreaterElement } from "../easy/0496-next-greater-element-i"
+import { findWords } from "../easy/0500-keyboard-row"
 
 
 describe("twoSum", () => {
@@ -445,5 +446,14 @@ describe("nextGreaterElement", () => {
     expect(nextGreaterElement([4, 1, 2], [1, 3, 4, 2])).toEqual([-1, 3, -1])
     expect(nextGreaterElement([2, 4], [1, 2, 3, 4])).toEqual([3, -1])
     expect(nextGreaterElement([2, 1, 3], [2, 3, 1])).toEqual([3, -1, -1])
+  })
+})
+
+
+describe("findWords", () => {
+  test("Returns an array of words that can be typed using only one row of the keyboard", () => {
+    expect(findWords(["Hello", "Alaska", "Dad", "Peace"])).toEqual(["Alaska", "Dad"])
+    expect(findWords(["omk"])).toEqual([])
+    expect(findWords(["adsdf","sfd"])).toEqual(["adsdf","sfd"])
   })
 })
