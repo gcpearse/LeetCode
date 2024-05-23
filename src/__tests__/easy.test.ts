@@ -41,6 +41,7 @@ import { findPoisonedDuration } from "../easy/0495-teemo-attacking"
 import { nextGreaterElement } from "../easy/0496-next-greater-element-i"
 import { findWords } from "../easy/0500-keyboard-row"
 import { findRelativeRanks } from "../easy/0506-relative-ranks"
+import { detectCapitalUse } from "../easy/0520-detect-capital"
 
 
 describe("twoSum", () => {
@@ -464,5 +465,16 @@ describe("findRelativeRanks", () => {
   test("Returns an array of relative ranks", () => {
     expect(findRelativeRanks([5, 4, 3, 2, 1])).toEqual(["Gold Medal", "Silver Medal", "Bronze Medal", "4", "5"])
     expect(findRelativeRanks([10, 3, 8, 9, 4])).toEqual(["Gold Medal", "5", "Bronze Medal", "Silver Medal", "4"])
+  })
+})
+
+
+describe("detectCapitalUse", () => {
+  test("Returns true if capitals are used correctly in the input string", () => {
+    expect(detectCapitalUse("USA")).toBe(true)
+  })
+
+  test("Returns false if capitals are used incorrectly in the input string", () => {
+    expect(detectCapitalUse("FlaG")).toBe(false)
   })
 })
