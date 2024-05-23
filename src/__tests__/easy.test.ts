@@ -346,11 +346,11 @@ describe("findTheDifference", () => {
 
 
 describe("isSubsequence", () => {
-  test("Returns true is s is a subsequence of t", () => {
+  test("Returns true if s is a subsequence of t", () => {
     expect(isSubsequence("abc", "ahbgdc")).toBe(true)
   })
 
-  test("Returns false is s is not a subsequence of t", () => {
+  test("Returns false if s is not a subsequence of t", () => {
     expect(isSubsequence("axc", "ahbgdc")).toBe(false)
   })
 })
