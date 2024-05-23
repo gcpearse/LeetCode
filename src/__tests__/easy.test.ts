@@ -40,6 +40,7 @@ import { findMaxConsecutiveOnes } from "../easy/0485-max-consecutive-ones"
 import { findPoisonedDuration } from "../easy/0495-teemo-attacking"
 import { nextGreaterElement } from "../easy/0496-next-greater-element-i"
 import { findWords } from "../easy/0500-keyboard-row"
+import { findRelativeRanks } from "../easy/0506-relative-ranks"
 
 
 describe("twoSum", () => {
@@ -455,5 +456,13 @@ describe("findWords", () => {
     expect(findWords(["Hello", "Alaska", "Dad", "Peace"])).toEqual(["Alaska", "Dad"])
     expect(findWords(["omk"])).toEqual([])
     expect(findWords(["adsdf","sfd"])).toEqual(["adsdf","sfd"])
+  })
+})
+
+
+describe("findRelativeRanks", () => {
+  test("Returns an array of relative ranks", () => {
+    expect(findRelativeRanks([5, 4, 3, 2, 1])).toEqual(["Gold Medal", "Silver Medal", "Bronze Medal", "4", "5"])
+    expect(findRelativeRanks([10, 3, 8, 9, 4])).toEqual(["Gold Medal", "5", "Bronze Medal", "Silver Medal", "4"])
   })
 })
