@@ -44,6 +44,7 @@ import { findRelativeRanks } from "../easy/0506-relative-ranks"
 import { detectCapitalUse } from "../easy/0520-detect-capital"
 import { checkRecord } from "../easy/0551-student-attendance-record-i"
 import { reverseWords } from "../easy/0557-reverse-words-in-a-string-iii"
+import { distributeCandies } from "../easy/0575-distribute-candies"
 
 
 describe("twoSum", () => {
@@ -497,5 +498,14 @@ describe("reverseWords", () => {
   test("Reverses the characters in each word of the input string while preserving whitespace and initial word order", () => {
     expect(reverseWords("Let's take LeetCode contest")).toBe("s'teL ekat edoCteeL tsetnoc")
     expect(reverseWords("Mr Ding")).toBe("rM gniD")
+  })
+})
+
+
+describe("distributeCandies", () => {
+  test("Returns the maximum number of different candies that Alice can eat", () => {
+    expect(distributeCandies([1, 1, 2, 2, 3, 3])).toBe(3)
+    expect(distributeCandies([1, 1, 2, 3])).toBe(2)
+    expect(distributeCandies([6, 6, 6, 6])).toBe(1)
   })
 })
