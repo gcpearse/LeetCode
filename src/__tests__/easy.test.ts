@@ -42,6 +42,8 @@ import { nextGreaterElement } from "../easy/0496-next-greater-element-i"
 import { findWords } from "../easy/0500-keyboard-row"
 import { findRelativeRanks } from "../easy/0506-relative-ranks"
 import { detectCapitalUse } from "../easy/0520-detect-capital"
+import { checkRecord } from "../easy/0551-student-attendance-record-i"
+import { reverseWords } from "../easy/0557-reverse-words-in-a-string-iii"
 
 
 describe("twoSum", () => {
@@ -476,5 +478,24 @@ describe("detectCapitalUse", () => {
 
   test("Returns false if capitals are used incorrectly in the input string", () => {
     expect(detectCapitalUse("FlaG")).toBe(false)
+  })
+})
+
+
+describe("checkRecord", () => {
+  test("Returns true if the student had fewer than 2 absences and was not late for more than 2 consecutive days", () => {
+    expect(checkRecord("PPALLP")).toBe(true)
+  })
+
+  test("Returns false if the student had 2 or more absences or was late for more than 2 consecutive days", () => {
+    expect(checkRecord("PPALLL")).toBe(false)
+  })
+})
+
+
+describe("reverseWords", () => {
+  test("Reverses the characters in each word of the input string while preserving whitespace and initial word order", () => {
+    expect(reverseWords("Let's take LeetCode contest")).toBe("s'teL ekat edoCteeL tsetnoc")
+    expect(reverseWords("Mr Ding")).toBe("rM gniD")
   })
 })
