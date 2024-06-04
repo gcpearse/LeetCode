@@ -9,7 +9,7 @@ export function maxProfit(prices: number[]): number {
       cheapest = prices[i]
     }
 
-    if (prices[i] > cheapest && prices[i] - cheapest > profit) {
+    if (prices[i] - cheapest > profit) {
       profit = prices[i] - cheapest
     }
   }
