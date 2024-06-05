@@ -3,14 +3,14 @@ export function searchInsert(nums: number[], target: number): number {
   let res = 0
 
   if (nums.includes(target)) {
-    res = nums.indexOf(target)
-  } else if (target > nums[nums.length - 1]) {
-    res = nums.length
-  } else if (target < nums[0]) {
-    res = 0
+    return nums.indexOf(target)
+  } else if (target <= nums[0]) {
+    return 0
+  } else if (target > nums[nums.length -1]) {
+    return nums.length
   } else {
     for (let i = 0; i < nums.length - 1; i++) {
-      if (target > nums[i] && target < nums[i + 1]) {
+      if (target > nums[i] && target <= nums[i + 1]) {
         res = i + 1
       }
     }
