@@ -1,14 +1,21 @@
 export function isValid(s: string): boolean {
 
-  const openers = ["(", "[", "{"]
-  const closers = [")", "]", "}"]
+  type Table = {
+    [key: string]: string
+  }
+
+  const pairs: Table = {
+    "(": ")",
+    "[": "]",
+    "{": "}"
+  }
 
   const stack: string[] = []
 
   for (const char of s) {
-    if (openers.includes(char)) {
+    if (char in pairs) {
       stack.push(char)
-    } else if (closers.indexOf(char) === openers.indexOf(stack[stack.length - 1])) {
+    } else if (pairs[stack[stack.length - 1]] === char) {
       stack.pop()
     } else {
       return false
