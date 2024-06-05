@@ -96,6 +96,7 @@ describe("isValid", () => {
 
   test("Returns false if the input string is invalid", () => {
     expect(isValid("(]")).toBe(false)
+    expect(isValid("]")).toBe(false)
   })
 })
 
