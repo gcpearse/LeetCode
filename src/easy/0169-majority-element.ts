@@ -1,30 +1,8 @@
 export function majorityElement(nums: number[]): number {
 
-  type Tally = {
-    [key: string]: number
-  }
+  if (nums.length === 1) return nums[0]
 
-  const tally: Tally = {}
-
-  for (const num of nums) {
-    if (!tally[num]) {
-      tally[num] = 1
-    } else {
-      tally[num]++
-    }
-  }
-
-  let max = 0
-  let res = ""
-
-  for (const key in tally) {
-    if (tally[key] > max) {
-      max = tally[key]
-      res = key
-    }
-  }
-
-  return +res
+  return nums.sort()[Math.floor(nums.length / 2)]
 }
 
 
