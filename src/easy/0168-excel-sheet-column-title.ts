@@ -1,7 +1,7 @@
 export function convertToTitle(columnNumber: number): string {
 
   let current = columnNumber
-  const result: string[] = []
+  let result = ""
 
   while (current > 0) {
 
@@ -9,15 +9,16 @@ export function convertToTitle(columnNumber: number): string {
     current -= remainder
 
     if (remainder) {
-      result.unshift(String.fromCharCode(remainder + 64))
-      current = current / 26
+      result += String.fromCharCode(remainder + 64)
+      current /= 26
     } else {
-      result.unshift("Z")
-      current = current / 26 - 1
+      result += "Z"
+      current /= 26
+      current--
     }
   }
 
-  return result.join("")
+  return result.split("").reverse().join("")
 }
 
 
