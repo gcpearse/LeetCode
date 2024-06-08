@@ -1,15 +1,12 @@
 export function missingNumber(nums: number[]): number {
 
-  const numsCopy = [...nums, 0]
+  let expectedTotal = 0
 
-  let result = 0
-
-  for (let i = 0; i < numsCopy.length; i++) {
-    result += i
-    result -= numsCopy[i]
+  for (let i = 0; i < nums.length + 1; i++) {
+    expectedTotal += i
   }
 
-  return result
+  return expectedTotal - nums.reduce((a, b) => a + b)
 }
 
 
