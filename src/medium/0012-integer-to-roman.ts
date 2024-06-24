@@ -17,14 +17,11 @@ export function intToRoman(num: number): string {
   ]
 
   let result = ""
-  let index = 0
 
-  while (num > 0) {
-    if (num - pairs[index].int >= 0) {
-      result += pairs[index].roman
-      num -= pairs[index].int
-    } else {
-      index++
+  for (const pair of pairs) {
+    while (num - pair.int >= 0) {
+      result += pair.roman
+      num -= pair.int
     }
   }
 
