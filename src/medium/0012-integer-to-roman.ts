@@ -24,7 +24,7 @@ export function intToRoman(num: number): string {
       result += pairs[index].roman
       num -= pairs[index].int
     } else {
-      index ++
+      index++
     }
   }
 
