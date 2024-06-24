@@ -1,10 +1,12 @@
 export function lengthOfLongestSubstring(s: string): number {
 
-  let i = 0
   let max = 0
   let temp = ""
 
-  while (i < s.length) {
+  for (let i = 0; i < s.length; i++) {
+
+    if (max >= s.length - i) return max
+
     for (let j = i; j < s.length; j++) {
       if (!temp.includes(s[j])) {
         temp += s[j]
@@ -18,8 +20,6 @@ export function lengthOfLongestSubstring(s: string): number {
     }
 
     temp = ""
-
-    i++
   }
 
   return max
