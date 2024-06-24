@@ -6,4 +6,4 @@ This repository contains my solutions to [LeetCode](https://leetcode.com/) probl
 
 Problems are organised by difficulty: easy, medium, and hard.
 
-I have used Jest with ts-jest to run unit tests on individual functions.
+The project includes a full suite of unit tests using the **Jest** framework with **ts-jest**.
