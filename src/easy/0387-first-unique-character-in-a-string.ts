@@ -1,15 +1,13 @@
 export function firstUniqueChar(s: string): number {
 
-  let index = -1
-
-  for (let i = 0; i < s.length; i++) {
-    if (s.indexOf(s[i]) === s.lastIndexOf(s[i])) {
-      index = i
+  for (const char of s) {
+    if (s.indexOf(char) === s.lastIndexOf(char)) {
+      return s.indexOf(char)
       break
     }
   }
 
-  return index
+  return -1
 }
 
 
