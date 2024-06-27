@@ -3,7 +3,6 @@ export function firstUniqueChar(s: string): number {
   for (const char of s) {
     if (s.indexOf(char) === s.lastIndexOf(char)) {
       return s.indexOf(char)
-      break
     }
   }
 
