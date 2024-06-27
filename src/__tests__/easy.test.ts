@@ -18,9 +18,11 @@ import { isPowerOfTwo } from "../easy/0231-power-of-two"
 import { isAnagram } from "../easy/0242-valid-anagram"
 import { addDigits } from "../easy/0258-add-digits"
 import { missingNumber } from "../easy/0268-missing-number"
+import { moveZeroes } from "../easy/0283-move-zeroes"
 import { wordPattern } from "../easy/0290-word-pattern"
 import { isPowerOfThree } from "../easy/0326-power-of-three"
 import { isPowerOfFour } from "../easy/0342-power-of-four"
+import { reverseString } from "../easy/0344-reverse-string"
 import { reverseVowels } from "../easy/0345-reverse-vowels-of-a-string"
 import { intersection } from "../easy/0349-intersection-of-two-arrays"
 import { isPerfectSquare } from "../easy/0367-valid-perfect-square"
@@ -257,6 +259,19 @@ describe("missingNumber", () => {
 })
 
 
+describe("moveZeroes", () => {
+  test("Moves all zeroes to the end of the array while maintaining the relative order of other elements", () => {
+    const nums1 = [0, 1, 0, 3, 12]
+    moveZeroes(nums1)
+    expect(nums1).toEqual([1, 3, 12, 0, 0])
+
+    const nums2 = [0]
+    moveZeroes(nums2)
+    expect(nums2).toEqual([0])
+  })
+})
+
+
 describe("wordPattern", () => {
   test("Returns true if the pattern matches s", () => {
     expect(wordPattern("abba", "dog cat cat dog")).toBe(true)
@@ -289,6 +304,19 @@ describe("isPowerOfFour", () => {
 
   test("Returns false when passed an integer that is not a power of four", () => {
     expect(isPowerOfFour(5)).toBe(false)
+  })
+})
+
+
+describe("reverseString", () => {
+  test("Reverses the array of characters in place", () => {
+    const s1 = ["h", "e", "l", "l", "o"]
+    reverseString(s1)
+    expect(s1).toEqual(["o", "l", "l", "e", "h"])
+
+    const s2 = ["H", "a", "n", "n", "a", "h"]
+    reverseString(s2)
+    expect(s2).toEqual(["h", "a", "n", "n", "a", "H"])
   })
 })
 
