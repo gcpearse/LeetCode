@@ -1,6 +1,18 @@
 function reverseString(s: string[]): void {
 
-  s.reverse()
+  let left = 0
+  let right = s.length - 1
+
+  for (let i = 0; i < Math.ceil(s.length / 2); i++) {
+
+    const temp = s[left]
+
+    s[left] = s[right]
+    s[right] = temp
+
+    left++
+    right--
+  }
 }
 
 
