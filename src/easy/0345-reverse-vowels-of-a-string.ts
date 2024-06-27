@@ -1,22 +1,35 @@
 export function reverseVowels(s: string): string {
 
-  const reversedVowels = s.split("").filter(char => {
-    return char.match(/[aeiou]/i)
-  }).reverse()
+  const chars = s.split("")
 
-  let result = ""
-  let index = 0
+  let left = 0
+  let right = chars.length - 1
 
-  for (const char of s) {
-    if (char.match(/[aeiou]/i)) {
-      result += reversedVowels[index]
-      index++
-    } else {
-      result += char
+  const vowels = new Set("aeiouAEIOU")
+
+  while (left < right) {
+
+    if (!vowels.has(chars[left])) {
+      left++
+    }
+
+    if (!vowels.has(chars[right])) {
+      right--
+    }
+
+    if (vowels.has(chars[left]) && vowels.has(chars[right])) {
+
+      const temp = s[left]
+
+      chars[left] = chars[right]
+      chars[right] = temp
+
+      left++
+      right--
     }
   }
 
-  return result
+  return chars.join("")
 }
 
 
