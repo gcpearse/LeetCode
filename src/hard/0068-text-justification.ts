@@ -1,19 +1,6 @@
 export function fullJustify(words: string[], maxWidth: number): string[] {
 
-  const lines: string[][] = []
-  let temp: string[] = []
-
-  for (const word of words) {
-    if ((word.length + 1) + (temp.join("").length + temp.length - 1) <= maxWidth) {
-      temp.push(word)
-    } else {
-      lines.push(temp)
-      temp = []
-      temp.push(word)
-    }
-  }
-
-  lines.push(temp)
+  const lines = buildLines(words, maxWidth)
 
   for (const line of lines) {
 
@@ -46,6 +33,27 @@ export function fullJustify(words: string[], maxWidth: number): string[] {
   const result = lines.map(line => line.join(""))
 
   return result
+}
+
+
+export function buildLines(words: string[], maxWidth: number): string[][] {
+
+  const lines: string[][] = []
+  let temp: string[] = []
+
+  for (const word of words) {
+    if ((word.length + 1) + (temp.join("").length + temp.length - 1) <= maxWidth) {
+      temp.push(word)
+    } else {
+      lines.push(temp)
+      temp = []
+      temp.push(word)
+    }
+  }
+
+  lines.push(temp)
+
+  return lines
 }
 
 
