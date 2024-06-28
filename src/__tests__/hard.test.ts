@@ -15,7 +15,7 @@ describe("isNumber", () => {
     expect(isNumber("0")).toBe(true)
   })
 
-  test("Returns false if s isnot  a valid number", () => {
+  test("Returns false if s is not a valid number", () => {
     expect(isNumber("e")).toBe(false)
     expect(isNumber(".")).toBe(false)
     expect(isNumber(".1.")).toBe(false)
