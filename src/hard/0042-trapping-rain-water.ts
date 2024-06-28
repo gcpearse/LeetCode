@@ -2,20 +2,53 @@ export function trap(height: number[]): number {
 
   let volume = 0
 
-  for (let i = 1; i < height.length - 1; i++) {
+  let left = 0
+  let right = height.length - 1
 
-    if (height.slice(0, i).some(x => x > height[i]) && height.slice(i).some(x => x > height[i])) {
+  let maxLeft = height[left]
+  let maxRight = height[right]
 
-      if (Math.max(...height.slice(0, i)) > Math.max(...height.slice(i))) {
-        volume += Math.max(...height.slice(i)) - height[i]
-      } else {
-        volume += Math.max(...height.slice(0, i)) - height[i]
-      }
+  while (left < right) {
+
+    if (height[left] < height[right]) {
+
+      left++
+
+      if (height[left] > maxLeft) maxLeft = height[left]
+
+      volume += maxLeft - height[left]
+    } else {
+
+      right--
+
+      if (height[right] > maxRight) maxRight = height[right]
+
+      volume += maxRight - height[right]
     }
   }
 
   return volume
 }
+
+
+// export function trap(height: number[]): number {
+
+//   let volume = 0
+
+//   for (let i = 1; i < height.length - 1; i++) {
+
+//     if (height.slice(0, i).some(x => x > height[i]) && height.slice(i).some(x => x > height[i])) {
+
+//       if (Math.max(...height.slice(0, i)) > Math.max(...height.slice(i))) {
+//         volume += Math.max(...height.slice(i)) - height[i]
+//       } else {
+//         volume += Math.max(...height.slice(0, i)) - height[i]
+//       }
+//     }
+//   }
+
+//   return volume
+// }
 
 
 /*
