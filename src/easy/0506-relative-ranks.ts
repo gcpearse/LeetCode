@@ -2,11 +2,7 @@ export function findRelativeRanks(score: number[]): string[] {
 
   const sortedScores = [...score].sort((a, b) => b - a)
 
-  type Table = {
-    [key: number]: string
-  }
-
-  const table: Table = {}
+  const table: {[key: number]: string} = {}
 
   for (let i = 0; i < sortedScores.length; i++) {
     if (i === 0) {

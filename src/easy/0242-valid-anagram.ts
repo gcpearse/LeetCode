@@ -2,11 +2,7 @@ export function isAnagram(s: string, t: string): boolean {
 
   if (s.length !== t.length) return false
 
-  type Tally = {
-    [key: string]: number
-  }
-
-  const tally: Tally = {}
+  const tally: {[key: string]: number} = {}
 
   for (const char of s) {
     if (!tally[char]) {

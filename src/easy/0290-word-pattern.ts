@@ -1,15 +1,11 @@
 export function wordPattern(pattern: string, s: string): boolean {
 
-  type Tally = {
-    [key: string]: string
-  }
-
   const patternArray = pattern.split("")
   const sArray = s.split(" ")
 
   if (patternArray.length !== sArray.length) return false
 
-  const tally: Tally = {}
+  const tally: {[key: string]: string} = {}
 
   for (let i = 0; i < patternArray.length; i++) {
     if (!tally[patternArray[i]]) {

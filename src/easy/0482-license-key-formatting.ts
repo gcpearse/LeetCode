@@ -1,4 +1,5 @@
 export function licenseKeyFormatting(s: string, k: number): string {
+
   const str = s.toUpperCase().replace(/-/g, "")
 
   const chars: string[] = []

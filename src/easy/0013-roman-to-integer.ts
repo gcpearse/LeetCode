@@ -1,10 +1,6 @@
 export function romanToInt(s: string): number {
 
-  type Map = {
-    [key: string]: number
-  }
-
-  const values: Map = {
+  const values: {[key: string]: number} = {
     M: 1000,
     D: 500,
     C: 100,

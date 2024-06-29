@@ -1,10 +1,6 @@
 export function longestPalindrome(s: string): number {
 
-  type Tally = {
-    [key: string]: number
-  }
-
-  const tally: Tally = {}
+  const tally: {[key: string]: number} = {}
 
   let count = 0
   let containsOdds = false

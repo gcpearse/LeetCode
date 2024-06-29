@@ -1,10 +1,6 @@
 export function isValid(s: string): boolean {
 
-  type Table = {
-    [key: string]: string
-  }
-
-  const pairs: Table = {
+  const pairs: {[key: string]: string} = {
     "(": ")",
     "[": "]",
     "{": "}"
