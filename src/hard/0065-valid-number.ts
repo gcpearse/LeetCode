@@ -25,7 +25,6 @@ An exponent is defined with an exponent notation 'e' or 'E' followed by an integ
 
 The digits are defined as one or more digits.
 
-
 Example 1:
 
 Input: s = "0"
