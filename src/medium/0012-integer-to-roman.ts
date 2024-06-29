@@ -1,27 +1,27 @@
 export function intToRoman(num: number): string {
 
-  const pairs = [
-    { roman: "M", int: 1000 },
-    { roman: "CM", int: 900 },
-    { roman: "D", int: 500 },
-    { roman: "CD", int: 400 },
-    { roman: "C", int: 100 },
-    { roman: "XC", int: 90 },
-    { roman: "L", int: 50 },
-    { roman: "XL", int: 40 },
-    { roman: "X", int: 10 },
-    { roman: "IX", int: 9 },
-    { roman: "V", int: 5 },
-    { roman: "IV", int: 4 },
-    { roman: "I", int: 1 }
-  ]
+  const pairs: {[key: string]: number} = {
+    "M": 1000,
+    "CM": 900,
+    "D": 500,
+    "CD": 400,
+    "C": 100,
+    "XC": 90,
+    "L": 50,
+    "XL": 40,
+    "X": 10,
+    "IX": 9,
+    "V": 5,
+    "IV": 4,
+    "I": 1
+  }
 
   let result = ""
 
-  for (const pair of pairs) {
-    while (num - pair.int >= 0) {
-      result += pair.roman
-      num -= pair.int
+  for (const key in pairs) {
+    while (num - pairs[key] >= 0) {
+      result += key
+      num -= pairs[key]
     }
   }
 
