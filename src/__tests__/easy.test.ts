@@ -47,6 +47,7 @@ import { detectCapitalUse } from "../easy/0520-detect-capital"
 import { checkRecord } from "../easy/0551-student-attendance-record-i"
 import { reverseWords } from "../easy/0557-reverse-words-in-a-string-iii"
 import { distributeCandies } from "../easy/0575-distribute-candies"
+import { canPlaceFlowers } from "../easy/0605-can-place-flowers"
 
 
 describe("twoSum", () => {
@@ -538,5 +539,17 @@ describe("distributeCandies", () => {
     expect(distributeCandies([1, 1, 2, 2, 3, 3])).toBe(3)
     expect(distributeCandies([1, 1, 2, 3])).toBe(2)
     expect(distributeCandies([6, 6, 6, 6])).toBe(1)
+  })
+})
+
+
+describe("canPlaceFlowers", () => {
+  test("Returns true if n new flowers can be planted", () => {
+    expect(canPlaceFlowers([1, 0, 0, 0, 1], 1)).toBe(true)
+    expect(canPlaceFlowers([0, 0, 1, 0, 0], 1)).toBe(true)
+  })
+
+  test("Returns false if n new flowers cannot be planted", () => {
+    expect(canPlaceFlowers([1, 0, 0, 0, 1], 2)).toBe(false)
   })
 })
