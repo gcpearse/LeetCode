@@ -1,8 +1,16 @@
 export function isPalindrome(x: number): boolean {
 
-  const str = String(x)
+  if (x < 0) return false
 
-  return str === str.split("").reverse().join("")
+  let y = x
+  let z = 0
+
+  while (y > 0) {
+    z = z * 10 + (y % 10)
+    y = Math.floor(y / 10)
+  }
+
+  return x === z
 }
 
 
