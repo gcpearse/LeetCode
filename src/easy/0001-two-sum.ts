@@ -1,18 +1,18 @@
 export function twoSum(nums: number[], target: number): number[] {
 
-  let res: number[] = []
+  const table = new Map<number, number>()
 
   for (let i = 0; i < nums.length; i++) {
+    const n = target - nums[i]
 
-    for (let j = 0; j < nums.length; j++) {
-      
-      if (nums[i] + nums[j] == target && i !== j) {
-        res = [j, i]
-      }
+    if (table.has(n)) {
+      return [table.get(n)!, i]
     }
+
+    table.set(nums[i], i)
   }
 
-  return res
+  return []
 }
 
 
