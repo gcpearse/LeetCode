@@ -2,15 +2,18 @@ export function longestCommonPrefix(strs: string[]): string {
 
   let prefix = ""
 
-  for (let i = 0; i < strs[0].length; i++) {
+  strs.sort()
 
-    if (strs.every(str => {
-      return str[i] === strs[0][i]
-    })) {
-      prefix += strs[0][i]
-    } else {
+  const first = strs[0]
+  const last = strs[strs.length - 1]
+
+  for (let i = 0; i < first.length; i++) {
+
+    if (first[i] !== last[i]) {
       break
     }
+
+    prefix += first[i]
   }
 
   return prefix
