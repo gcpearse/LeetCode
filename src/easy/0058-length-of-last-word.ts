@@ -1,10 +1,16 @@
 export function lengthOfLastWord(s: string): number {
 
-  const cleanStr = s.trim().replace(/\s+/g, " ")
+  let count = 0
 
-  const words = cleanStr.split(" ")
+  for (let i = s.length - 1; i >= 0; i--) {
+    if (s[i] !== " ") {
+      count++
+    } else if (count > 0) {
+      break
+    }
+  }
 
-  return words[words.length - 1].length
+  return count
 }
 
 
